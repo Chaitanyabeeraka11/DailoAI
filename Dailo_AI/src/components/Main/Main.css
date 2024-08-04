@@ -1,0 +1,75 @@
+.main{
+    min-height: 97.5vh;
+    flex: 1;
+    padding-bottom: 15vh;
+    position: relative;
+    background-color: #f5efff;
+}
+.main .nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+    padding: 10px;
+    color: black;
+    background-color: #D8CEFF;
+    border-radius: 12px;
+    margin-left: 5px;
+}
+.main-container{
+    max-width: 900px;
+    margin: auto;
+}
+.main .greet{
+    align-items: center;
+    font-size: 56px;
+}
+.main .greet span{
+    background: -webkit-linear-gradient(16deg, #22333b,#7371fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.main .help{
+    font-size: 40px
+}
+.main-bottom {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 900px;
+    padding: 0 20px;
+    /* Corrected padding syntax */
+    box-sizing: border-box;
+    /* Ensure padding doesn't affect width */
+}
+.searchbox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #A594F9;
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin-top: 150px;
+}
+.searchbox img{
+    width: 20px;
+}
+.searchbox input{
+    flex: 1;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding: 8px;
+    font-size: 16px;
+    
+}
+.main .bottom-info{
+    font-size: 13px;
+    margin: 15px auto;
+    text-align: center;
+    font-weight: 300;
+    
+}
