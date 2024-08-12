@@ -21,12 +21,18 @@ const Main = () => {
             </>:
             <div className='result'>
                 
-                <div className="resultTilte">
-                    <img src={assets.user_icon} alt="" />
+                <div className="resultTitle">
+                    
                     <p>{recentPrompt}</p>
                 </div>
                 <div className="resultData">
-                    <p dangerouslySetInnerHTML={{__html:resultData }}></p>
+                    
+                    {loading?
+                    <div className="loader">
+                        <hr />
+                        <hr />
+                    </div>:
+                    <p dangerouslySetInnerHTML={{__html:resultData }}></p>}
                 </div>
             </div>
         }

@@ -11,15 +11,42 @@ const ContextProvider = (props) => {
     const [loading,setLoading] = useState(false);
     const [resultData,setresultData] = useState("");
 
-
+const delayPara = (index,nextWord) =>{
+    setTimeout(function (){
+        setresultData(prev=> prev + nextWord)
+    },75*index)
+}
 
     const onSent = async(prompt)=>{
         setresultData("")
         setLoading(true)
         setshowResult(true)
-        setrecentPrompt(input)
-        const response = await run(input)
-        setresultData(response)
+        let response;
+        if(prompt !== undefined ){
+            response = await run(prompt)
+            setrecentPrompt(prompt)
+        }
+        else{
+            setprevPrompts(prev => [...prev,input])
+        }
+        
+        
+        let responseArray = response.split("**");
+        let newresponse = ""; 
+        for(let i = 0; i <responseArray.length;i++){
+            if(i==0 || i%2!=1){
+                newresponse = newresponse + responseArray[i];
+            }
+            else{
+                newresponse = newresponse + "<b style='color:#7371fc'>" + responseArray[i] + "</b>";
+            }
+        }
+        let newresponse2 = newresponse.split("*").join("</br>")
+        let newResponseArray = newresponse2.split(" ");
+        for(let i = 0; i <newResponseArray.length;i++){
+            const nextWord = newResponseArray[i];
+            delayPara(i,nextWord+ " ");
+        }
         setLoading(false)
         setInput("")
     }

@@ -25,6 +25,7 @@
 .main .greet {
     align-items: center;
     font-size: 56px;
+    margin-top: 50px;
 }
 
 .main .greet span {
@@ -57,6 +58,7 @@
     background-color: #A594F9;
     padding: 10px 20px;
     border-radius: 50px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 .searchbox img {
@@ -94,18 +96,61 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    /* Adjust the gap as needed */
-    margin: 40px 0;
-    /* Corrected margin syntax */
-    
+    margin: 10px 0;
+    background-color: #b3b2df;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.resultTitle p{
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 20px;
 }
 
-.result img {
-    width: 40px;
-    border-radius: 20%;
-}
+
 .resultData{
     display: flex;
     align-items: start;
     gap: 20px;
+}
+
+.loader {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 auto;
+    /* Center the loader */
+}
+
+.loader hr {
+    border-radius: 10px;
+    border: none;
+    background-color: #7371fc;
+    /* Use a simple, visible color */
+    height: 20px;
+    width: 100%;
+    /* Ensure it stretches the full width */
+    animation: pulse 1s infinite ease-in-out;
+    /* Add an animation for better visual effect */
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.resultData p{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.8;
 }

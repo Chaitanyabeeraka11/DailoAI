@@ -1,4 +1,4 @@
-.sidebar{
+.sidebar {
     min-height: 97.5vh;
     display: inline-flex;
     flex-direction: column;
@@ -6,37 +6,50 @@
     background-color: #D8CEFF;
     padding: 25px 15px;
     border-radius: 12px;
+    width: 70px;
+    transition: width 0.3s ease;
+    /* Transition for width */
 }
-.sidebar img{
+
+.sidebar-extended {
+    width: 250px;
+    /* Adjust to desired width */
+}
+
+.sidebar img {
     width: 20px;
 }
-.sidebar .menu{
+
+.sidebar .menu {
     display: block;
     margin-left: 10px;
     cursor: pointer;
 }
-.sidebar .newChat{
+
+.sidebar .newChat {
     margin-top: 50px;
     display: inline-flex;
     align-items: center;
     gap: 10px;
     padding: 5px 10px;
-    background-color:#e5d9f2;
+    background-color: #e5d9f2;
     border-radius: 12px;
     font-size: 16px;
     color: black;
     cursor: pointer;
 }
-.sidebar .recent{
+
+.sidebar .recent {
     display: flex;
     flex-direction: column;
-
 }
-.sidebar .recent-title{
+
+.sidebar .recent-title {
     margin-top: 30px;
     margin-bottom: 20px;
 }
-.sidebar .recent-entry{
+
+.sidebar .recent-entry {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -46,15 +59,17 @@
     color: black;
     cursor: pointer;
 }
+
 .sidebar .recent-entry:hover {
     background-color: #e5d9f2;
-
 }
-.sidebar .bottom{
+
+.sidebar .bottom {
     display: flex;
     flex-direction: column;
 }
-.sidebar .bottom-item{
+
+.sidebar .bottom-item {
     padding-right: 10px;
     cursor: pointer;
 }
